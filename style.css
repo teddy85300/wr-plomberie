@@ -118,8 +118,24 @@ nav {
   letter-spacing: 0.02em;
 }
 
+.logo img {
+  width: 48px;
+  height: 48px;
+
+  margin-right: 12px;
+
+  object-fit: contain;
+
+  border-radius: 8px;
+
+  background: var(--white);
+
+  padding: 4px;
+}
+
 .logo span {
   margin-left: 5px;
+
   color: var(--blue);
 }
 
@@ -132,7 +148,7 @@ nav {
   display: flex;
   align-items: center;
 
-  gap: 24px;
+  gap: 22px;
 }
 
 .nav-links a {
@@ -140,7 +156,7 @@ nav {
 
   color: var(--white);
 
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   font-weight: 700;
 
   transition: 0.2s ease;
@@ -175,7 +191,7 @@ nav {
   align-items: center;
   justify-content: center;
 
-  padding: 12px 20px;
+  padding: 12px 18px;
 
   border-radius: 7px;
 
@@ -183,7 +199,7 @@ nav {
 
   color: var(--navy) !important;
 
-  font-size: 0.9rem !important;
+  font-size: 0.86rem !important;
   font-weight: 800 !important;
 
   white-space: nowrap;
@@ -193,6 +209,7 @@ nav {
 
 .nav-appel:hover {
   background: var(--white);
+
   color: var(--navy) !important;
 }
 
@@ -309,13 +326,16 @@ nav {
     linear-gradient(
       90deg,
       rgba(3, 24, 39, 0.96) 0%,
-      rgba(3, 24, 39, 0.86) 45%,
-      rgba(3, 24, 39, 0.55) 100%
+      rgba(3, 24, 39, 0.84) 45%,
+      rgba(3, 24, 39, 0.45) 100%
     ),
-    url("images/facade.webp");
+    url("images/vitrine.webp");
 
   background-size: cover;
+
   background-position: center;
+
+  background-repeat: no-repeat;
 }
 
 .hero::after {
@@ -505,7 +525,7 @@ nav {
 
 
 /* =========================================================
-   PRESENTATION
+   PRESENTATION ENTREPRISE
 ========================================================= */
 
 .presentation {
@@ -522,6 +542,8 @@ nav {
   overflow: hidden;
 
   border-radius: 12px;
+
+  background: var(--navy);
 
   box-shadow: var(--shadow);
 }
@@ -1067,6 +1089,13 @@ footer p {
     font-size: 1rem;
   }
 
+  .logo img {
+    width: 40px;
+    height: 40px;
+
+    margin-right: 8px;
+  }
+
   .nav-links {
     width: 100%;
 
@@ -1206,7 +1235,7 @@ footer p {
   }
 
 
-  /* PAGES */
+  /* PAGES INTERIEURES */
 
   .page-hero {
     padding: 62px 15px;
