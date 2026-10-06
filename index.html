@@ -13,7 +13,7 @@
 
   <meta
     name="description"
-    content="WR Plomberie à Rosny-sous-Bois : dépannage plomberie, recherche de fuite, dégorgement, débouchage et travaux de plomberie."
+    content="WR Plomberie à Rosny-sous-Bois : dépannage, recherche de fuite, dégorgement, débouchage et travaux de plomberie."
   >
 
   <link rel="stylesheet" href="style.css">
@@ -23,37 +23,24 @@
 <body>
 
   <!-- =====================================================
-       EN-TETE
+       HEADER
   ====================================================== -->
 
   <header>
 
     <nav>
 
-      <!-- LOGO -->
-
       <a href="index.html" class="logo">
 
         <img
-          src="images/logo.png"
+          src="./images/logo.png"
           alt="Logo WR Plomberie"
-          style="
-            width:48px;
-            height:48px;
-            object-fit:contain;
-            margin-right:12px;
-            border-radius:8px;
-            background:#ffffff;
-            padding:4px;
-          "
         >
 
         WR <span>Plomberie</span>
 
       </a>
 
-
-      <!-- MENU -->
 
       <ul class="nav-links">
 
@@ -102,8 +89,6 @@
       </ul>
 
 
-      <!-- TELEPHONE -->
-
       <a
         href="tel:0983939569"
         class="nav-appel"
@@ -116,19 +101,64 @@
   </header>
 
 
-
   <!-- =====================================================
-       GRANDE PHOTO D'ACCUEIL
-       La façade est chargée par style.css :
-       images/facade.webp
+       ACCUEIL AVEC VRAIE PHOTO
   ====================================================== -->
 
-  <main class="hero">
+  <main
+    class="hero"
+    style="
+      position:relative;
+      background:none;
+      min-height:635px;
+      overflow:hidden;
+    "
+  >
 
-    <div class="hero-contenu">
+    <!-- PHOTO VITRINE -->
+
+    <img
+      src="./images/vitrine.webp"
+      alt="Façade de WR Plomberie à Rosny-sous-Bois"
+      style="
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        object-position:center;
+        z-index:0;
+      "
+    >
+
+
+    <!-- FILTRE SOMBRE -->
+
+    <div
+      style="
+        position:absolute;
+        inset:0;
+        z-index:1;
+        background:
+          linear-gradient(
+            90deg,
+            rgba(3,24,39,0.94) 0%,
+            rgba(3,24,39,0.82) 45%,
+            rgba(3,24,39,0.38) 100%
+          );
+      "
+    ></div>
+
+
+    <!-- TEXTE -->
+
+    <div
+      class="hero-contenu"
+      style="position:relative; z-index:2;"
+    >
 
       <div class="hero-texte">
-
 
         <span class="sur-titre">
           WR Plomberie • Rosny-sous-Bois
@@ -143,8 +173,8 @@
 
         <p>
           Dépannage, recherche de fuite,
-          dégorgement, débouchage
-          et travaux de plomberie à Rosny-sous-Bois.
+          dégorgement, débouchage et travaux
+          de plomberie à Rosny-sous-Bois.
         </p>
 
 
@@ -167,7 +197,6 @@
 
         </div>
 
-
       </div>
 
     </div>
@@ -175,9 +204,8 @@
   </main>
 
 
-
   <!-- =====================================================
-       3 INFORMATIONS PRINCIPALES
+       INFOS RAPIDES
   ====================================================== -->
 
   <section class="infos-rapides">
@@ -245,7 +273,6 @@
   </section>
 
 
-
   <!-- =====================================================
        PRESENTATION
   ====================================================== -->
@@ -257,20 +284,16 @@
       <div class="presentation">
 
 
-        <!-- PHOTO PLAQUE -->
-
         <div class="presentation-image">
 
           <img
-            src="images/plaque.webp"
-            alt="WR Plomberie à Rosny-sous-Bois"
+            src="./images/plaque.webp"
+            alt="WR Plomberie"
             loading="lazy"
           >
 
         </div>
 
-
-        <!-- TEXTE -->
 
         <div class="presentation-texte">
 
@@ -293,10 +316,9 @@
 
 
           <p>
-            Notre objectif est de vous proposer
-            une intervention adaptée à la situation,
-            avec du matériel professionnel
-            lorsque cela est nécessaire.
+            Chaque intervention est étudiée afin
+            de déterminer la solution et le matériel
+            adaptés à la situation.
           </p>
 
 
@@ -309,7 +331,6 @@
               Découvrir l'entreprise
             </a>
 
-
             <a
               href="interventions.html"
               class="btn btn-contour"
@@ -319,15 +340,14 @@
 
           </div>
 
-
         </div>
+
 
       </div>
 
     </div>
 
   </section>
-
 
 
   <!-- =====================================================
@@ -338,18 +358,15 @@
 
     <div class="container">
 
-
       <div class="titre-section">
 
         <span class="sur-titre">
           Nos services
         </span>
 
-
         <h2>
           Une solution adaptée à votre plomberie
         </h2>
-
 
         <p>
           Découvrez les principales interventions
@@ -359,11 +376,8 @@
       </div>
 
 
-
       <div class="services-grid">
 
-
-        <!-- SERVICE 1 -->
 
         <article class="service-card">
 
@@ -384,9 +398,6 @@
         </article>
 
 
-
-        <!-- SERVICE 2 -->
-
         <article class="service-card">
 
           <div class="service-icone">
@@ -406,9 +417,6 @@
         </article>
 
 
-
-        <!-- SERVICE 3 -->
-
         <article class="service-card">
 
           <div class="service-icone">
@@ -422,14 +430,13 @@
           <p>
             Dégorgement et débouchage
             de canalisations avec du matériel
-            adapté à la situation rencontrée.
+            adapté à la situation.
           </p>
 
         </article>
 
 
       </div>
-
 
 
       <div
@@ -446,11 +453,9 @@
 
       </div>
 
-
     </div>
 
   </section>
-
 
 
   <!-- =====================================================
@@ -467,16 +472,13 @@
           Nos tarifs
         </span>
 
-
         <h2>
           Des tarifs clairement présentés
         </h2>
 
-
         <p>
-          Consultez notre page Tarifs
-          pour retrouver les principaux prix
-          de nos interventions.
+          Retrouvez les principaux tarifs
+          de nos interventions sur une page dédiée.
         </p>
 
 
@@ -501,7 +503,6 @@
   </section>
 
 
-
   <!-- =====================================================
        REALISATIONS
   ====================================================== -->
@@ -516,14 +517,12 @@
           Notre travail
         </span>
 
-
         <h2>
           Nos réalisations
         </h2>
 
-
         <p>
-          Les photos de nos prochaines réalisations
+          Des photos de nos réalisations
           seront progressivement ajoutées
           dans cette rubrique.
         </p>
@@ -550,9 +549,8 @@
   </section>
 
 
-
   <!-- =====================================================
-       APPEL
+       CONTACT
   ====================================================== -->
 
   <section class="cta">
@@ -562,7 +560,6 @@
       <h2>
         Besoin d'un plombier ?
       </h2>
-
 
       <p>
         Pour un dépannage, un débouchage
@@ -580,7 +577,6 @@
           ☎ 09 83 93 95 69
         </a>
 
-
         <a
           href="contact.html"
           class="btn btn-blanc"
@@ -595,20 +591,17 @@
   </section>
 
 
-
   <!-- =====================================================
-       PIED DE PAGE
+       FOOTER
   ====================================================== -->
 
   <footer>
 
     <div class="container">
 
-
       <div class="footer-logo">
         WR <span>Plomberie</span>
       </div>
-
 
       <p>
         Plomberie • Dépannage • Débouchage • Installation
@@ -617,33 +610,19 @@
 
       <div class="footer-liens">
 
-        <a href="index.html">
-          Accueil
-        </a>
-
+        <a href="index.html">Accueil</a>
         •
-
-        <a href="services.html">
-          Services
-        </a>
-
+        <a href="services.html">Services</a>
         •
-
-        <a href="tarifs.html">
-          Tarifs
-        </a>
-
+        <a href="tarifs.html">Tarifs</a>
         •
-
-        <a href="entreprise.html">
-          L'entreprise
-        </a>
-
+        <a href="interventions.html">Interventions</a>
         •
-
-        <a href="contact.html">
-          Contact
-        </a>
+        <a href="realisations.html">Réalisations</a>
+        •
+        <a href="entreprise.html">L'entreprise</a>
+        •
+        <a href="contact.html">Contact</a>
 
       </div>
 
@@ -652,12 +631,10 @@
         © 2026 WR Plomberie — Tous droits réservés
       </p>
 
-
     </div>
 
   </footer>
 
 
 </body>
-
 </html>
