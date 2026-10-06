@@ -1,395 +1,1141 @@
-```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>WR Plomberie | Plombier à Rosny-sous-Bois</title>
-
-    <meta
-        name="description"
-        content="WR Plomberie à Rosny-sous-Bois. Dépannage plomberie, détection de fuite, dégorgement et interventions d'urgence. Contactez-nous au 09 83 93 95 69."
-    >
-
-    <meta
-        name="keywords"
-        content="plombier Rosny-sous-Bois, plomberie Rosny-sous-Bois, dépannage plomberie, fuite d'eau, détection de fuite, dégorgement, plombier 93110"
-    >
-
-    <meta name="author" content="WR Plomberie">
-
-    <meta name="theme-color" content="#07111f">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="WR Plomberie | Plombier à Rosny-sous-Bois">
-    <meta
-        property="og:description"
-        content="Dépannage plomberie, détection de fuite, dégorgement et interventions d'urgence à Rosny-sous-Bois."
-    >
-    <meta property="og:image" content="images/vitrine.webp">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="WR Plomberie | Plombier à Rosny-sous-Bois">
-    <meta
-        name="twitter:description"
-        content="Dépannage plomberie, détection de fuite, dégorgement et interventions d'urgence."
-    >
-    <meta name="twitter:image" content="images/vitrine.webp">
-
-    <link rel="canonical" href="https://teddy85300.github.io/wr-plomberie/">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
-
-    <style>
-
-        :root {
-            --dark: #07111f;
-            --dark-2: #0c1b2e;
-            --dark-3: #102842;
-
-            --blue: #0b84ff;
-            --blue-dark: #0667c9;
-            --cyan: #27c5ff;
-
-            --white: #ffffff;
-            --light: #f4f7fb;
-            --light-blue: #eaf5ff;
-
-            --text: #172235;
-            --muted: #64748b;
-
-            --border: #e5eaf1;
-
-            --shadow: 0 20px 50px rgba(7, 17, 31, 0.10);
-            --shadow-hover: 0 25px 60px rgba(7, 17, 31, 0.16);
-
-            --radius: 22px;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 90px;
-        }
-
-        body {
-            font-family: "Inter", sans-serif;
-            color: var(--text);
-            background: var(--white);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        body.menu-open {
-            overflow: hidden;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        button {
-            font: inherit;
-        }
-
-        .container {
-            width: min(1180px, calc(100% - 40px));
-            margin: 0 auto;
-        }
-
-
-        /* =====================================================
-           HEADER
-        ===================================================== */
-
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-
-            background: rgba(7, 17, 31, 0.92);
-            backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
-
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-
-            transition: 0.3s ease;
-        }
-
-        header.scrolled {
-            background: rgba(4, 11, 20, 0.97);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.18);
-        }
-
-        .nav {
-            min-height: 82px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            gap: 25px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 13px;
-
-            flex-shrink: 0;
-        }
-
-        .logo img {
-            width: 54px;
-            height: 54px;
-
-            object-fit: contain;
-        }
-
-        .logo-text {
-            color: white;
-
-            font-family: "Manrope", sans-serif;
-            font-size: 19px;
-            font-weight: 800;
-
-            line-height: 1.1;
-        }
-
-        .logo-text span {
-            display: block;
-
-            color: #6fd7ff;
-
-            font-size: 10px;
-            letter-spacing: 1.7px;
-
-            text-transform: uppercase;
-
-            margin-top: 5px;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 26px;
-        }
-
-        nav a:not(.nav-phone) {
-            color: rgba(255,255,255,0.78);
-
-            font-size: 14px;
-            font-weight: 600;
-
-            transition: 0.25s ease;
-        }
-
-        nav a:not(.nav-phone):hover {
-            color: white;
-        }
-
-        .nav-phone {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-
-            min-height: 46px;
-
-            padding: 0 17px;
-
-            background: var(--blue);
-            color: white !important;
-
-            border-radius: 12px;
-
-            font-size: 14px;
-            font-weight: 800;
-
-            box-shadow:
-                0 8px 22px rgba(11,132,255,0.25);
-
-            transition: 0.25s ease;
-        }
-
-        .nav-phone:hover {
-            background: var(--blue-dark);
-            transform: translateY(-2px);
-        }
-
-
-        /* =====================================================
-           MOBILE MENU
-        ===================================================== */
-
-        .menu-toggle {
-            display: none;
-
-            width: 45px;
-            height: 45px;
-
-            align-items: center;
-            justify-content: center;
-
-            background: rgba(255,255,255,0.08);
-
-            border: 1px solid rgba(255,255,255,0.12);
-            border-radius: 12px;
-
-            color: white;
-            cursor: pointer;
-        }
-
-        .menu-toggle span,
-        .menu-toggle span::before,
-        .menu-toggle span::after {
-            display: block;
-
-            width: 21px;
-            height: 2px;
-
-            background: white;
-
-            border-radius: 5px;
-
-            transition: 0.25s ease;
-        }
-
-        .menu-toggle span {
-            position: relative;
-        }
-
-        .menu-toggle span::before,
-        .menu-toggle span::after {
-            content: "";
-            position: absolute;
-            left: 0;
-        }
-
-        .menu-toggle span::before {
-            top: -7px;
-        }
-
-        .menu-toggle span::after {
-            top: 7px;
-        }
-
-        .mobile-menu {
-            display: none;
-        }
-
-
-        /* =====================================================
-           HERO
-        ===================================================== */
-
-        .hero {
-            min-height: 780px;
-
-            position: relative;
-
-            display: flex;
-            align-items: center;
-
-            overflow: hidden;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(4,13,25,0.96) 0%,
-                    rgba(4,13,25,0.89) 40%,
-                    rgba(4,13,25,0.60) 72%,
-                    rgba(4,13,25,0.42) 100%
-                ),
-                url("images/vitrine.webp") center/cover no-repeat;
-        }
-
-        .hero::before {
-            content: "";
-
-            position: absolute;
-
-            width: 700px;
-            height: 700px;
-
-            border-radius: 50%;
-
-            background: rgba(11,132,255,0.13);
-
-            filter: blur(110px);
-
-            right: -300px;
-            top: 50%;
-
-            transform: translateY(-50%);
-        }
-
-        .hero::after {
-            content: "";
-
-            position: absolute;
-
-            left: 0;
-            right: 0;
-            bottom: 0;
-
-            height: 180px;
-
-            background: linear-gradient(
-                transparent,
-                rgba(4,11,20,0.20)
-            );
-
-            pointer-events: none;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-
-            max-width: 760px;
-
-            padding-top: 75px;
-
-            animation: heroReveal 0.9s ease both;
-        }
-
-        @keyframes heroReveal {
-
-            from {
-                opacity: 0;
-                transform: translateY(25px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-
-        }
-
-        .eyebrow {
-            display: inline-flex;
-            al
-```
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>WR Plomberie | Plombier à Rosny-sous-Bois</title>
+
+  <meta name="description" content="WR Plomberie à Rosny-sous-Bois : dépannage plomberie, détection de fuite, dégorgement, débouchage, remplacement de robinetterie et interventions de plomberie.">
+
+  <meta name="theme-color" content="#071b2e">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #142333;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    :root {
+      --navy: #071b2e;
+      --navy2: #0b2944;
+      --blue: #0077b6;
+      --cyan: #00b4d8;
+      --light: #eef8fc;
+      --white: #ffffff;
+      --text: #142333;
+      --muted: #637381;
+      --border: #dbe7ee;
+    }
+
+    .container {
+      width: min(1180px, 90%);
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(7, 27, 46, 0.97);
+      box-shadow: 0 4px 18px rgba(0,0,0,.16);
+    }
+
+    .header-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      color: white;
+      font-weight: 800;
+      font-size: 20px;
+    }
+
+    .brand img {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+      background: white;
+      border-radius: 10px;
+      padding: 4px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    nav a:hover {
+      color: var(--cyan);
+    }
+
+    .phone {
+      background: var(--cyan);
+      color: var(--navy);
+      padding: 11px 17px;
+      border-radius: 9px;
+      font-weight: 900;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 650px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: white;
+      background:
+        linear-gradient(90deg,
+          rgba(4,20,34,.96) 0%,
+          rgba(4,20,34,.86) 45%,
+          rgba(4,20,34,.38) 100%),
+        url("images/vitrine.webp") center/cover no-repeat;
+    }
+
+    .hero-content {
+      max-width: 720px;
+      padding: 85px 0;
+    }
+
+    .badge {
+      display: inline-block;
+      color: #8cecff;
+      border: 1px solid rgba(140,236,255,.45);
+      background: rgba(0,180,216,.10);
+      padding: 7px 14px;
+      border-radius: 999px;
+      margin-bottom: 22px;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 75px);
+      line-height: 1.02;
+      letter-spacing: -2px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span {
+      color: var(--cyan);
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 650px;
+      color: #e0ebf1;
+      margin-bottom: 32px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 9px;
+      font-weight: 800;
+      transition: .2s;
+    }
+
+    .btn-primary {
+      background: var(--cyan);
+      color: var(--navy);
+    }
+
+    .btn-secondary {
+      color: white;
+      border: 1px solid rgba(255,255,255,.6);
+      background: rgba(255,255,255,.08);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-head {
+      max-width: 720px;
+      margin-bottom: 42px;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: var(--navy);
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.12;
+      margin-bottom: 15px;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    /* SERVICES */
+
+    .services {
+      background: white;
+    }
+
+    .grid-services {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 30px 25px;
+      background: white;
+      box-shadow: 0 10px 35px rgba(7,27,46,.06);
+    }
+
+    .service-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 13px;
+      display: grid;
+      place-items: center;
+      background: var(--light);
+      color: var(--blue);
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      color: var(--navy);
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* INTERVENTION */
+
+    .intervention {
+      background: var(--navy);
+      color: white;
+    }
+
+    .intervention h2 {
+      color: white;
+    }
+
+    .intervention .lead {
+      color: #c6d6df;
+    }
+
+    .intervention-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .intervention-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .intervention-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      background: rgba(255,255,255,.06);
+      padding: 17px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    .check {
+      color: var(--cyan);
+      font-weight: 900;
+      font-size: 20px;
+    }
+
+    .intervention-photo img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      border-radius: 20px;
+      border: 5px solid rgba(255,255,255,.08);
+    }
+
+    /* TARIFS */
+
+    .tarifs {
+      background: #f5fafc;
+    }
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .price-card {
+      background: white;
+      border-radius: 16px;
+      padding: 27px;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 30px rgba(7,27,46,.05);
+    }
+
+    .price-card.featured {
+      border: 2px solid var(--cyan);
+    }
+
+    .price-title {
+      color: var(--navy);
+      font-size: 19px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    .price small {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .price-card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .notice {
+      margin-top: 25px;
+      background: #e7f7fb;
+      border-left: 5px solid var(--cyan);
+      padding: 20px 22px;
+      border-radius: 10px;
+      color: #294351;
+      font-size: 14px;
+    }
+
+    /* REALISATIONS */
+
+    .realisations {
+      background: white;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 20px;
+    }
+
+    .gallery-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 18px;
+      min-height: 360px;
+      background: #dceaf0;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      object-fit: cover;
+    }
+
+    .gallery-label {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      background: rgba(7,27,46,.88);
+      color: white;
+      padding: 9px 13px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .future-gallery {
+      margin-top: 20px;
+      padding: 40px;
+      border: 2px dashed #bed4df;
+      border-radius: 18px;
+      text-align: center;
+      background: #f8fcfd;
+    }
+
+    .future-gallery h3 {
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .future-gallery p {
+      color: var(--muted);
+    }
+
+    /* ENTREPRISE */
+
+    .about {
+      background: var(--light);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .about-photo {
+      background: white;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 15px 40px rgba(7,27,46,.10);
+    }
+
+    .about-photo img {
+      max-height: 420px;
+      margin: auto;
+      object-fit: contain;
+    }
+
+    .about p {
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 15px;
+    }
+
+    /* CTA */
+
+    .cta {
+      padding: 65px 0;
+      background: linear-gradient(120deg, #0077b6, #00b4d8);
+      color: white;
+    }
+
+    .cta-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .cta h2 {
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    .cta p {
+      font-size: 18px;
+    }
+
+    .cta .btn {
+      background: var(--navy);
+      color: white;
+      white-space: nowrap;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: #071b2e;
+      color: white;
+    }
+
+    .contact h2 {
+      color: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+    }
+
+    .contact .lead {
+      color: #bdcbd4;
+    }
+
+    .contact-box {
+      margin-top: 25px;
+      display: grid;
+      gap: 15px;
+    }
+
+    .contact-line {
+      padding: 18px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 11px;
+    }
+
+    .contact-line strong {
+      color: #8cecff;
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .plaque {
+      background: white;
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .plaque img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: contain;
+    }
+
+    footer {
+      background: #03111e;
+      color: #9fb0bd;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 14px;
+    }
+
+    /* MOBILE CALL */
+
+    .mobile-call {
+      display: none;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 980px) {
+      nav {
+        display: none;
+      }
+
+      .grid-services {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .intervention-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+      body {
+        padding-bottom: 70px;
+      }
+
+      .header-inner {
+        min-height: 68px;
+      }
+
+      .brand img {
+        width: 47px;
+        height: 47px;
+      }
+
+      .brand {
+        font-size: 17px;
+      }
+
+      .header-inner > .phone {
+        display: none;
+      }
+
+      .hero {
+        min-height: 590px;
+        background:
+          linear-gradient(rgba(4,20,34,.82), rgba(4,20,34,.92)),
+          url("images/vitrine.webp") center/cover no-repeat;
+      }
+
+      .hero h1 {
+        font-size: 44px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .grid-services,
+      .price-grid,
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-card,
+      .gallery-card img {
+        min-height: 280px;
+      }
+
+      .cta-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .mobile-call {
+        display: flex;
+        position: fixed;
+        left: 14px;
+        right: 14px;
+        bottom: 12px;
+        height: 55px;
+        align-items: center;
+        justify-content: center;
+        z-index: 2000;
+        background: var(--cyan);
+        color: var(--navy);
+        border-radius: 13px;
+        font-weight: 900;
+        box-shadow: 0 8px 30px rgba(0,0,0,.25);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container header-inner">
+
+    <a href="#accueil" class="brand">
+      <img src="images/logo.png" alt="Logo WR Plomberie">
+      <span>WR PLOMBERIE</span>
+    </a>
+
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#interventions">Interventions</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#entreprise">L'entreprise</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="phone" href="tel:+33983939569">
+      09 83 93 95 69
+    </a>
+
+  </div>
+</header>
+
+
+<main>
+
+  <!-- ACCUEIL -->
+
+  <section class="hero" id="accueil">
+    <div class="container">
+      <div class="hero-content">
+
+        <div class="badge">WR Plomberie • Rosny-sous-Bois</div>
+
+        <h1>
+          Votre plomberie,<br>
+          <span>notre métier.</span>
+        </h1>
+
+        <p>
+          Dépannage, recherche de fuite, dégorgement,
+          débouchage et travaux de plomberie à Rosny-sous-Bois.
+        </p>
+
+        <div class="buttons">
+          <a href="tel:+33983939569" class="btn btn-primary">
+            ☎ Appeler le 09 83 93 95 69
+          </a>
+
+          <a href="#services" class="btn btn-secondary">
+            Découvrir nos services
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SERVICES -->
+
+  <section class="services" id="services">
+    <div class="container">
+
+      <div class="section-head">
+        <div class="eyebrow">Nos services</div>
+        <h2>Des solutions pour vos besoins en plomberie</h2>
+        <p class="lead">
+          WR Plomberie intervient pour le dépannage et les travaux
+          courants de plomberie.
+        </p>
+      </div>
+
+      <div class="grid-services">
+
+        <article class="service-card">
+          <div class="service-icon">🔧</div>
+          <h3>Dépannage plomberie</h3>
+          <p>
+            Intervention pour vos différents problèmes de plomberie
+            et remplacement des équipements concernés.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">💧</div>
+          <h3>Détection de fuite</h3>
+          <p>
+            Recherche et identification de l'origine d'une fuite
+            afin de déterminer l'intervention adaptée.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">🚿</div>
+          <h3>Dégorgement & débouchage</h3>
+          <p>
+            Débouchage des canalisations et interventions
+            de dégorgement avec le matériel adapté.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">🚨</div>
+          <h3>Intervention dépannage</h3>
+          <p>
+            Une solution adaptée lorsqu'un problème de plomberie
+            nécessite une intervention.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- INTERVENTIONS -->
+
+  <section class="intervention" id="interventions">
+    <div class="container intervention-grid">
+
+      <div>
+        <div class="eyebrow" style="color:#8cecff;">Interventions</div>
+
+        <h2>Un équipement adapté à chaque situation</h2>
+
+        <p class="lead">
+          Selon la nature du problème rencontré, différents moyens
+          peuvent être utilisés pour réaliser l'intervention.
+        </p>
+
+        <div class="intervention-list">
+
+          <div class="intervention-item">
+            <span class="check">✓</span>
+            <div>
+              <strong>Passage du furet</strong><br>
+              Pour les opérations de dégorgement et de débouchage.
+            </div>
+          </div>
+
+          <div class="intervention-item">
+            <span class="check">✓</span>
+            <div>
+              <strong>VULCANO R600 Rothenberger</strong><br>
+              Intervention mécanique adaptée au débouchage des canalisations.
+            </div>
+          </div>
+
+          <div class="intervention-item">
+            <span class="check">✓</span>
+            <div>
+              <strong>Camion à pression</strong><br>
+              Intervention avec équipement haute pression lorsque la situation le nécessite.
+            </div>
+          </div>
+
+          <div class="intervention-item">
+            <span class="check">✓</span>
+            <div>
+              <strong>Robinetterie</strong><br>
+              Remplacement de robinetterie de lavabo ou d'évier.
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="intervention-photo">
+        <img src="images/vitrine.webp"
+             alt="WR Plomberie à Rosny-sous-Bois">
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- TARIFS -->
+
+  <section class="tarifs" id="tarifs">
+    <div class="container">
+
+      <div class="section-head">
+        <div class="eyebrow">Nos tarifs</div>
+        <h2>Des tarifs clairement présentés</h2>
+        <p class="lead">
+          Consultez les principaux tarifs d'intervention de WR Plomberie.
+        </p>
+      </div>
+
+      <div class="price-grid">
+
+        <article class="price-card">
+          <div class="price-title">
+            Déplacement et première heure — compagnon seul
+          </div>
+
+          <div class="price">
+            145,20 € <small>TTC</small>
+          </div>
+
+          <p>
+            Déplacement et première heure d'intervention,
+            hors matériel.
+          </p>
+        </article>
+
+
+        <article class="price-card">
+          <div class="price-title">
+            Déplacement et première heure — intervention en équipe
+          </div>
+
+          <div class="price">
+            182,60 € <small>TTC</small>
+          </div>
+
+          <p>
+            Déplacement et première heure d'intervention en équipe,
+            hors matériel.
+          </p>
+        </article>
+
+
+        <article class="price-card">
+          <div class="price-title">
+            Dégorgement / débouchage — passage du furet
+          </div>
+
+          <div class="price">
+            205,70 € <small>TTC</small>
+          </div>
+
+          <p>
+            Tarif correspondant à la première heure d'intervention.
+          </p>
+        </article>
+
+
+        <article class="price-card">
+          <div class="price-title">
+            Passage du VULCANO R600 Rothenberger
+          </div>
+
+          <div class="price">
+            270,60 € <small>TTC</small>
+          </div>
+
+          <p>
+            Première heure d'intervention en équipe.
+          </p>
+        </article>
+
+
+        <article class="price-card">
+          <div class="price-title">
+            Passage du camion à pression
+          </div>
+
+          <div class="price">
+            520 € <small>HT</small>
+          </div>
+
+          <p>
+            Tarif pour une heure d'intervention avec camion à pression.
+          </p>
+        </article>
+
+
+        <article class="price-card featured">
+          <div class="price-title">
+            Remplacement d'une robinetterie standard
+          </div>
+
+          <div class="price">
+            249,70 € <small>TTC</small>
+          </div>
+
+          <p>
+            Forfait comprenant le déplacement, la main-d'œuvre,
+            la fourniture et le remplacement d'une robinetterie standard
+            pour lavabo ou évier.
+            Intervention d'une durée maximale d'une heure.
+          </p>
+        </article>
+
+      </div>
+
+
+      <div class="notice">
+        <strong>Information concernant les tarifs :</strong><br>
+        Les prix indiqués ne comprennent pas le petit matériel
+        éventuellement nécessaire à la réalisation de l'intervention
+        (siphons, joints, raccords PVC, etc.), qui sera facturé en supplément
+        selon les besoins constatés sur place.
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- REALISATIONS -->
+
+  <section class="realisations" id="realisations">
+    <div class="container">
+
+      <div class="section-head">
+        <div class="eyebrow">Nos réalisations</div>
+        <h2>Quelques travaux réalisés</h2>
+        <p class="lead">
+          Découvrez prochainement plusieurs exemples d'interventions
+          et de travaux réalisés par WR Plomberie.
+        </p>
+      </div>
+
+      <div class="gallery">
+
+        <div class="gallery-card">
+          <img src="images/vitrine.webp"
+               alt="WR Plomberie Rosny-sous-Bois">
+          <div class="gallery-label">WR Plomberie</div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="images/plaque.webp"
+               alt="WR Plomberie">
+          <div class="gallery-label">Notre entreprise</div>
+        </div>
+
+      </div>
+
+      <div class="future-gallery">
+        <h3>🚿 Nos travaux en images</h3>
+        <p>
+          De nouvelles photos de nos réalisations seront ajoutées ici.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ENTREPRISE -->
+
+  <section class="about" id="entreprise">
+    <div class="container about-grid">
+
+      <div class="about-photo">
+        <img src="images/logo.png" alt="Logo WR Plomberie">
+      </div>
+
+      <div>
+        <div class="eyebrow">L'entreprise</div>
+
+        <h2>WR Plomberie à Rosny-sous-Bois</h2>
+
+        <p>
+          WR Plomberie intervient pour vos besoins de dépannage,
+          de recherche de fuite, de dégorgement et pour différents
+          travaux de plomberie.
+        </p>
+
+        <p>
+          L'entreprise est située au
+          <strong>19 rue du Général Leclerc, 93110 Rosny-sous-Bois</strong>.
+        </p>
+
+        <div class="buttons" style="margin-top:25px;">
+          <a href="tel:+33983939569" class="btn btn-primary">
+            Nous appeler
+          </a>
+
+          <a href="#contact" class="btn"
+             style="border:1px solid #9db5c1;color:#071b2e;">
+            Nous trouver
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+
+  <section class="cta">
+    <div class="container cta-inner">
+
+      <div>
+        <h2>Un problème de plomberie ?</h2>
+        <p>
+          Contactez directement WR Plomberie pour nous expliquer votre situation.
+        </p>
+      </div>
+
+      <a href="tel:+33983939569" class="btn">
+        ☎ 09 83 93 95 69
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section class="contact" id="contact">
+    <div class="container contact-grid">
+
+      <div>
+
+        <div class="eyebrow" style="color:#8cecff;">Contact</div>
+
+        <h2>Contactez WR Plomberie</h2>
+
+        <p class="lead">
+          Pour une demande d'intervention ou de renseignement,
+          contactez-nous directement.
+        </p>
+
+        <div class="contact-box">
+
+          <div class="contact-line">
+            <strong>Téléphone</strong>
+            <a href="tel:+33983939569">
+              09 83 93 95 69
+            </a>
+          </div>
+
+          <div class="contact-line">
+            <strong>Adresse</strong>
+            19 rue du Général Leclerc<br>
+            93110 Rosny-sous-Bois
+          </div>
+
+          <div class="contact-line">
+            <strong>Itinéraire</strong>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=19+rue+du+G%C3%A9n%C3%A9ral+Leclerc+93110+Rosny-sous-Bois"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="color:#8cecff;">
+              Voir l'adresse sur Google Maps →
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="plaque">
+        <img src="images/plaque.webp"
+             alt="Plaque WR Plomberie">
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+
+<footer>
+  © WR Plomberie — 19 rue du Général Leclerc,
+  93110 Rosny-sous-Bois — 09 83 93 95 69
+</footer>
+
+
+<a class="mobile-call" href="tel:+33983939569">
+  ☎ Appeler WR Plomberie
+</a>
+
+</body>
+</html>
