@@ -1447,3 +1447,15 @@ footer .footer-legal-links span{margin:0 7px}
 .legal-content p{margin-bottom:15px}
 .legal-content .legal-warning{border-left:4px solid #c48b35;background:#fff8e9;color:#3b2a0c;padding:15px 18px;border-radius:6px}
 @media(max-width:600px){footer .footer-legal-links{font-size:12px;padding:0 12px}.legal-content{padding:32px 18px 45px}}
+
+/* Pied de page : liens juridiques regroupés et crédit WebÉclat distinct */
+footer .footer-legal-pages{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+footer .footer-legal-pages span{margin:0}
+footer .footer-credit{margin-top:8px;white-space:nowrap}
+@media(max-width:600px){
+ footer .footer-legal-links{margin:20px auto 0;padding:14px 6px 0;border-top:1px solid rgba(197,211,220,.22);font-size:13px;line-height:1.65}
+ footer .footer-legal-pages{gap:8px 12px}
+ footer .footer-legal-pages span{display:none}
+ footer .footer-credit{margin-top:12px}
+ footer .footer-credit a{color:#20bfe7;font-weight:700}
+}
